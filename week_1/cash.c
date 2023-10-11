@@ -2,22 +2,25 @@
 #include <cs50.h>
 #include <math.h>
 
-//cash
+// calculate cash change
 
 int main(void)
 {
-    //user's input
+    // user's input
     float N;
     do
     {
         N = get_float("Change owed: ");
     }
-    while (N < 0);
-    //input adjastment
+    while (N < 0); // only accept non-negative amount
+
+    // input adjastment
     int n = round(N * 100);
-    //coins counter
+
+    // coins counter
     int i = 0;
-    //25 cents
+
+    // 25 cents
     while (n - 25 >= 0)
     {
         n = n - 25;
@@ -29,18 +32,19 @@ int main(void)
         n = n - 10;
         i = i + 1;
     }
-    //5 cents
+    // 5 cents
     while (n - 5 >= 0)
     {
         n = n - 5;
         i = i + 1;
     }
-    //1 cents
+    // 1 cents
     while (n - 1 >= 0)
     {
         n = n - 1;
         i = i + 1;
     }
-    //output
+
+    // output
     printf("%i\n", i);
 }
