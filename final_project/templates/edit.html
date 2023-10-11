@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block title %}
+{% endblock  title %}
+{% block main %}
+    <form method="POST">
+        <!-- Category field -->
+        <div class="mb-3">
+            <label for="category" class="form-label">Category:</label>
+            <select name="category" class="form-control" id="category">
+                <!-- Iterate the list created at login -->
+                {% for category in categories %}
+                    <!-- Display as defult the original category -->
+                    {% if category == row_data["category"] %}
+                        <option value="{{ category }}" selected>{{ category }}</option>
+                    {% else %}
+                        <option value="{{ category }}">{{ category }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <!-- Sum field -->
+        <div class="mb-3">
+            <label for="sum" class="form-label">Sum:</label>
+            <input class="form-control" name="sum" type="number" step="0.01" id="sum" required
+            value="{{ row_data['sum'] }}">
+        </div>
+        <!-- Date field -->
+        <div class="mb-3">
+            <label for="date" class="form-label">Date:</label>
+            <input class="form-control" name="date" type="date" id="date" required
+            value="{{ row_data['date'] }}">
+        </div>
+        <!-- Details field -->
+        <div class="mb-3">
+            <label for="details" class="form-label">details:</label>
+            <input class="form-control" name="details" type="text" id="details"
+            value="{{ row_data['details'] }}">
+        </div>
+        <!-- Submit button -->
+        <button class="btn btn-primary" type="submit">Save Changes</button>
+    </form>
+{% endblock main %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Number of shares</th>
+                    <th>Price</th>
+                    <th>Total Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in user_data %}
+                    <tr>
+                        <td>{{ i["name"] }}</td>
+                        <td>{{ i["number"] }}</td>
+                        <td>{{ i["price"] | usd }}</td>
+                        <td>{{ i["total_value"] | usd }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p>
+            Cash Balance: {{ cash | usd }}
+        </p>
+        <p>
+            Grand Total = {{ grand_total | usd }}
+        </p>
+    </div>
+{% endblock %}

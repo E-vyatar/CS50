@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Akaya Telivigala' rel='stylesheet'>
+        <title>My Webpage</title>
+        <script>
+            /* the artemis fowl series expand and collapse */
+            document.addEventListener('DOMContentLoaded', function() {
+                /* clickable subtitle*/
+                let  showA = document.querySelector("#showA");
+                /* block containing the series */
+                let expand = document.querySelector("#expand");
+                showA.onclick = function()
+                    {
+                        if (expand.style.display == "none")
+                        {
+                            expand.style.display = "block";
+                            showA.innerHTML = "The Artemis Fowl series (click to collapse)";
+                        }
+                        else
+                        {
+                            expand.style.display = "none";
+                            showA.innerHTML = "The Artemis Fowl series (click to expand)";
+                        }
+                    };
+                });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="font-size:25px">
+            <div class="navbar-header" id="navbarNavAltMarkup">
+                <div class="navbar-nav" data-toggle="collapse">
+                    <a class="nav-link" href="https://ide-9cfa177de76246a18cbe58f01c82326b-8080.cs50.ws/homepage/index.html">Homepage</a>
+                    <a class="nav-link" href="https://ide-9cfa177de76246a18cbe58f01c82326b-8080.cs50.ws/homepage/page1.html">Youtube</a>
+                    <a class="nav-link" href="https://ide-9cfa177de76246a18cbe58f01c82326b-8080.cs50.ws/homepage/page2.html">Books</a>
+                    <a class="nav-link" href="https://ide-9cfa177de76246a18cbe58f01c82326b-8080.cs50.ws/homepage/page3.html">Places I visited</a>
+                </div>
+            </div>
+        </nav>
+        <!-- title -->
+        <div class="headline">
+            Books
+        </div>
+        <!-- subtitle -->
+        <h2>
+            Here are some of my favorite books
+        </h2>
+        <br>
+        <!-- Physics of the Impossible -->
+        <div class="container">
+            <div class="row align-items-center justify-content-between book">
+                <!-- cover -->
+                <div class="col-lg-3 cover">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/00/Physics_of_the_impossible_Kaku_2008.jpg"
+                    alt="Physics of the Impossible">
+                </div>
+                <!-- summary -->
+                <div class="col-lg-9 overflow-auto summary">
+                    One hundred years ago, scientists would have said that lasers, televisions, and the atomic bomb were beyond the realm of physical possibility.
+                    In Physics of the Impossible, the renowned physicist Michio Kaku explores to what extent the technologies and devices of science fiction that are deemed equally impossible today might well become commonplace in the future.
+                    From teleportation to telekinesis, Kaku uses the world of science fiction to explore the fundamentals—and the limits—of the laws of physics as we know them today.
+                    He ranks the impossible technologies by categories—Class I, II, and III, depending on when they might be achieved, within the next century, millennia, or perhaps never.
+                    In a compelling and thought-provoking narrative, he explains:
+                    <br>
+                    • How the science of optics and electromagnetism may one day enable us to bend light around an object, like a stream flowing around a boulder, making the object invisible to observers “downstream”
+                    <br>
+                    • How ramjet rockets, laser sails, antimatter engines, and nanorockets may one day take us to the nearby stars
+                    <br>
+                    • How telepathy and psychokinesis, once considered pseudoscience, may one day be possible using advances in MRI, computers, superconductivity, and nanotechnology
+                    <br>
+                    • Why a time machine is apparently consistent with the known laws of quantum physics, although it would take an unbelievably advanced civilization to actually build one
+                    <br>
+                    Kaku uses his discussion of each technology as a jumping-off point to explain the science behind it.
+                    An extraordinary scientific adventure, Physics of the Impossible takes readers on an unforgettable, mesmerizing journey into the world of science that both enlightens and entertains.
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- The Hundred-Year-Old Man Who Climbed Out the Window and Disappeared -->
+        <div class="container">
+            <div class="row align-items-center justify-content-between book">
+                <!-- cover -->
+                <div class="col-lg-3 cover">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/e/e4/Hundra%C3%A5ringen_som_klev_ut_genom_f%C3%B6nstret_och_f%C3%B6rsvann.jpg"
+                    alt="The Hundred-Year-Old Man Who Climbed Out the Window and Disappeared">
+                </div>
+                <!-- summary -->
+                <div class="col-lg-9 overflow-auto summary">
+                    After a long and eventful life, Allan Karlsson ends up in a nursing home, believing it to be his last stop.
+                    The only problem is that he’s still in good health.
+                    A big celebration is in the works for his 100th birthday, but Allan really isn’t interested (and he’d like a bit more control over his alcohol consumption), so he decides to escape.
+                    He climbs out the window in his slippers and embarks on a hilarious and entirely unexpected journey.
+                    It would be the adventure of a lifetime for anyone else, but Allan has a larger-than-life backstory: he has not only witnessed some of the most important events of the 20th century, but actually played a key role in them.
+                    Quirky and utterly unique, The 100-Year-Old Man Who Climbed Out the Window and Disappeared has charmed readers across the world.
+                </div>
+            </div>
+        </div>
+        <br>
+        <h2 id="showA" style="margin-top: 30px">The Artemis Fowl series (click to expand)</h2>
+        <br>
+        <div id="expand" style="display:none">
+            <!-- Artemis Fowl -->
+            <div class="container">
+                <div class="row align-items-center justify-content-between book">
+                    <!-- cover -->
+                    <div class="col-lg-3 cover">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/0/07/Artemis_Fowl_first_edition_cover.jpg"
+                        alt="Artemis Fowl">
+                    </div>
+                    <!-- summary -->
+                    <div class="col-lg-9 overflow-auto summary">
+                        Twelve-year-old criminal mastermind Artemis Fowl has discovered a world below ground of armed and dangerous--and extremely high-tech--fairies.
+                        He kidnaps one of them, Holly Short, and holds her for ransom in an effort to restore his family's fortune.
+                        But he may have underestimated the fairies' powers.
+                        Is he about to trigger a cross-species war?
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Artemis Fowl and the Arctic Incident -->
+            <div class="container">
+                <div class="row align-items-center justify-content-between book">
+                    <!-- cover -->
+                    <div class="col-lg-3 cover">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Artemisfowl2.JPG"
+                        alt="Artemis Fowl and the Arctic Incident">
+                    </div>
+                    <!-- summary -->
+                    <div class="col-lg-9 overflow-auto summary">
+                        Artemis Fowl is at boarding school in Ireland when he receives an urgent video email from Russia.
+                        It's a plea from his father, who has been kidnapped by the Russian mafia.
+                        As Artemis rushes to his rescue, he is stopped by Captain Holly Short.
+                        This time, instead of battling the fairies, he's going to have to join forces with them if he wants to save one of the few people he loves.
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Artemis Fowl and the Eternity Code -->
+            <div class="container">
+                <div class="row align-items-center justify-content-between book">
+                    <!-- cover -->
+                    <div class="col-lg-3 cover">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/3/3e/Artemisfowl3.JPG"
+                        alt="Artemis Fowl and the Eternity Code">
+                    </div>
+                    <!-- summary -->
+                    <div class="col-lg-9 overflow-auto summary">
+                        Artemis Fowl has created the most powerful new supercomputer known to man--using stolen technology from an elite race of underground fairies.
+                        When the computer falls into the hands of an IT billionaire with a mob connection, Artemis is in deep trouble.
+                        Only one fairy can help now.
+                        If only he wasn't the fairies' public enemy number one. . .
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Artemis Fowl and the Opal Deception -->
+            <div class="container">
+                <div class="row align-items-center justify-content-between book">
+                    <!-- cover -->
+                    <div class="col-lg-3 cover">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/1/1d/Opaldeception.jpg"
+                            alt="Artemis Fowl and the Opal Deception">
+                    </div>
+                    <!-- summary -->
+                    <div class="col-lg-9 overflow-auto summary">
+                        The evil pixie Opal Koboi has spent the last year in a self-induced coma, plotting her revenge on all those who foiled her attempt to destroy the LEPrecon fairy police.
+                        And Artemis Fowl is at the top of her list.
+                        After his last run-in with the fairies, Artemis had his mind wiped of his memories of the world belowground.
+                        But they have not forgotten about him.
+                        Once again, he must stop the human and fairy worlds from colliding—only this time, Artemis faces an enemy who may have finally outsmarted him.
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Artemis Fowl and the Lost Colony -->
+            <div class="container">
+                <div class="row align-items-center justify-content-between book">
+                    <!-- cover -->
+                    <div class="col-lg-3 cover">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/5/5d/Covers_af5.jpg"
+                        alt="Artemis Fowl and the Lost Colony">
+                    </div>
+                    <!-- summary -->
+                    <div class="col-lg-9 overflow-auto summary">
+                        Ten millennia ago, the fairy people were defeated in a great battle with mankind, forcing them to move underground.
+                        Only the 8th family of fairies remained undefeated: the demons.
+                        But now one demon has discovered the secrets of the fairy world, and if humans get hold of this information, the fairies are in big trouble.
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Artemis Fowl and the Time Paradox -->
+            <div class="container">
+                <div class="row align-items-center justify-content-between book">
+                    <!-- cover -->
+                    <div class="col-lg-3 cover">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/ArtemisFowlTimeParadoxCover.gif"
+                        alt="Artemis Fowl and the Time Paradox">
+                    </div>
+                    <!-- summary -->
+                    <div class="col-lg-9 overflow-auto summary">
+                        After disappearing for three years, Artemis Fowl has returned to a life different from the one he left.
+                        Now he's a big brother, and spends his days teaching his twin siblings the important things in life, such as how to properly summon a waiter at a French restaurant.
+                        But when Artemis Fowl's mother contracts a life-threatening illness, his world is turned upside down. The only hope for a cure lies in the brain fluid of the silky sifaka lemur.
+                        Unfortunately, the animal is extinct due to a heartless bargain Artemis himself made as a younger boy.
+                        Though the odds are stacked against him, Artemis is not willing to give up.
+                        With the help of his fairy friends, the young genius travels back in time to save the lemur and bring it back to the present.
+                        But to do so, Artemis will have to defeat a maniacal poacher, who has set his sights on new prey: Holly Short.
+                        The rules of time travel are far from simple, but to save his mother, Artemis will have to break them all and outsmart his most cunning adversary yet: Artemis Fowl, age ten.
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Artemis Fowl: The Atlantis Complex -->
+            <div class="container">
+                <div class="row align-items-center justify-content-between book">
+                    <!-- cover -->
+                    <div class="col-lg-3 cover">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Artemis_Fowl_-_The_Atlantis_Complex.jpg"
+                        alt="Artemis Fowl: The Atlantis Complex">
+                    </div>
+                    <!-- summary -->
+                    <div class="col-lg-9 overflow-auto summary">
+                        Young Artemis has frequently used high-tech fairy magic to mastermind the most devious criminal activity of the new century.
+                        Now, at a conference in Iceland, Artemis has gathered the fairies to present his latest idea to save the world from global warming.
+                        But Artemis is behaving strangely - he seems different.
+                        Something terrible has happened to him . . . Artemis Fowl has become nice.
+                        The fairies diagnose Atlantis Complex (that’s obsessive compulsive disorder to you and I) - it seems dabbling in magic has damaged Artemis’ main weapon: his mind.
+                        Fairy ally Captain Holly Short doesn’t know what to do.
+                        The subterranean volcanoes are under attack from vicious robots and Artemis cannot fight them.
+                        Can Holly get the real Artemis back before the robot probes destroy every human and life form?
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Artemis Fowl and the Last Guardian -->
+            <div class="container">
+                <div class="row align-items-center justify-content-between book">
+                    <!-- cover -->
+                    <div class="col-lg-3 cover">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/4/4e/Artemis_Fowl_and_the_The_Last_Guardian_UK_cover.jpg"
+                        alt="Artemis Fowl and the Last Guardian">
+                    </div>
+                    <!-- summary -->
+                    <div class="col-lg-9 overflow-auto summary">
+                        Seemingly nothing in this world daunts the young criminal mastermind Artemis Fowl.
+                        In the fairy world, however, there is a small thing that has gotten under his skin on more than one occasion: Opal Koboi.
+                        In The Last Guardian, the evil pixie is wreaking havoc yet again.
+                        This time his arch rival has somehow reanimated dead fairy warriors who were buried in the grounds of Fowl Manor.
+                        Their spirits have possessed Artemis’s little brothers, making his siblings even more annoying than usual.
+                        The warriors don’t seem to realize that the battle they were fighting when they died—a battle against Artemis—is long over.
+                        Artemis has until sunrise to get the spirits to vacate his brothers and go back into the earth where they belong.
+                        Can he count on a certain LEPrecon fairy to join him in what could well be his last stand?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

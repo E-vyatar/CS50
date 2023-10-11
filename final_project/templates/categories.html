@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}
+{% endblock  title %}
+{% block main %}
+    <form method="POST">
+        <!-- Action field -->
+        <div class="mb-3">
+            <label for="action" class="form-label">Action:</label>
+            <select class="form-control" name="action" type="text" id="action" required autofocus>
+                <!-- Display option, not for use -->
+                <option value="" selected disabled hidden></option>
+                <!-- Iterate the list which at application.py -->
+                {% for action in actions %}
+                    <option value="{{ action }}">{{ action }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <!-- Category field -->
+        <div class="mb-3 ">
+            <label for="category" class="form-label">Category:</label>
+            <input class="form-control" name="category" type="text" id="category" required autofocus>
+        </div>
+        <!-- Submit button -->
+        <button class="btn btn-primary" type="submit">Save</button>
+    </form>
+{% endblock main %}

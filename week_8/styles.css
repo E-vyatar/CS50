@@ -1,0 +1,153 @@
+/* general */
+body {
+    background-image: url('https://img.freepik.com/free-vector/watercolor-background_87374-69.jpg?size=626&ext=jpg&ga=GA1.2.1614264220.1617235200');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Akaya Telivigala';
+}
+
+.headline {
+    text-align: center;
+    font-size: 75px;
+    margin: 20px auto;
+    width: 80;
+}
+
+h2 {
+    width: 75%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* homepage */
+form {
+    outline-style: groove;
+    outline-color: dodgerblue;
+    outline-width: 10px;
+    display: inline-block;
+    min-width: 40%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: lightskyblue;
+
+}
+
+.form-group {
+    line-height: 1.8;
+    display: block;
+    margin: auto;
+    padding: 10px 0px 10px;
+    text-align:center;
+    font-size: 30px;
+}
+
+/* youtube */
+playlist {
+    display: grid;
+    grid-template-rows: auto auto;
+    min-width: 50%;
+    max-width: 500px;
+    align-content: space-around;
+    margin: 0px 15px 50px;
+    outline-style: groove;
+    outline-color: crimson;
+    outline-width: 10px;
+    background-color: lightcoral;
+
+}
+
+playlist img {
+    display: block;
+    width: 100%;
+    padding: 10px 10px 0;
+}
+
+playlist span {
+    text-align: center;
+    font-size: 40px;
+    color: red;
+}
+
+/* books */
+.cover img{
+    width: inherit;
+    padding: 10px;
+}
+
+.book {
+    max-width: 90%;
+    margin: 0 auto 20px;
+    outline-style: groove;
+    outline-color: seagreen;
+    outline-width: 10px;
+    background-color: springgreen;
+
+}
+
+.summary {
+    max-height: 395px;
+    font-size: 25px;
+}
+
+#showA:hover {
+    cursor: pointer;
+}
+
+/* places i visited */
+.country {
+    display: grid;
+    max-width: 800px;
+    align-content: space-around;
+    grid-row-gap: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    outline-style: groove;
+    outline-color: yellow;
+    outline-width: 10px;
+    background-color: lightyellow;
+
+}
+
+#show {
+    text-align: center;
+    grid-row: 2;
+    font-size: 25px;
+    margin: 0 auto;
+}
+
+#expandB {
+    grid-row: 3;
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+#expandB img {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    height: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.flag {
+    max-width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    grid-row: 1;
+    border-radius: 15px;
+}
+
+.flag:hover {
+    cursor: pointer;
+}
+
+.country span:hover {
+    cursor: pointer;
+}

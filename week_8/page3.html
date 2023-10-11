@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Akaya Telivigala' rel='stylesheet'>
+        <title>My Webpage</title>
+        <script>
+            /* display country images */
+            document.addEventListener('DOMContentLoaded', function()
+            {
+                /* countries names */
+                let show = document.querySelectorAll("#show");
+                /* countries flags */
+                let flag = document.querySelectorAll(".flag");
+                /* countries images containers */
+                let expand = document.querySelectorAll("#expandB");
+                for (let i = 0; i < show.length; i++)
+                {
+                    /* clickables countries names */
+                    show[i].onclick = function()
+                    {
+                        if(expand[i].style.display == 'none')
+                        {
+                            expand[i].style.display = 'block';
+                        }
+                        else
+                        {
+                            expand[i].style.display = 'none';
+                        }
+                    };
+                    /* clickables countries flags */
+                    flag[i].onclick = function()
+                    {
+                        if(expand[i].style.display == 'none')
+                        {
+                          expand[i].style.display = 'block';
+                        }
+                        else
+                        {
+                          expand[i].style.display = 'none';
+                        }
+                    };
+                }
+            });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="font-size:25px">
+            <div class="navbar-header" id="navbarNavAltMarkup">
+                <div class="navbar-nav" data-toggle="collapse">
+                    <a class="nav-link" href="https://ide-9cfa177de76246a18cbe58f01c82326b-8080.cs50.ws/homepage/index.html">Homepage</a>
+                    <a class="nav-link" href="https://ide-9cfa177de76246a18cbe58f01c82326b-8080.cs50.ws/homepage/page1.html">Youtube</a>
+                    <a class="nav-link" href="https://ide-9cfa177de76246a18cbe58f01c82326b-8080.cs50.ws/homepage/page2.html">Books</a>
+                    <a class="nav-link" href="https://ide-9cfa177de76246a18cbe58f01c82326b-8080.cs50.ws/homepage/page3.html">Places I visited</a>
+                </div>
+            </div>
+        </nav>
+        <!-- title -->
+        <div class="headline">
+            Places I visited
+        </div>
+        <!-- subtitle -->
+        <h2>
+            Watch some pictures from the countries I've been in.
+            <br>
+            Click on a country's flag or name to display it's pictures.
+            <br>
+            (The page might take a minute to load)
+        </h2>
+        <!--Netherlands-->
+          <div class="container">
+              <row>
+                  <div class="col-lg-auto country">
+                      <!-- flag -->
+                      <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg"
+                      alt="Netherlands's flag">
+                      <!-- name -->
+                      <span id="show">
+                          Netherlands
+                      </span>
+                      <!-- images -->
+                      <div id="expandB">
+                          <img src="pictures/Netherlands/IMG_20180102_105000.jpg" alt="Netherlands1">
+                          <img src="pictures/Netherlands/IMG_20180103_104046.jpg" alt="Netherlands3">
+                          <img src="pictures/Netherlands/IMG_20180102_174059.jpg" alt="Netherlands2">
+                          <img src="pictures/Netherlands/IMG_20180103_104104.jpg" alt="Netherlands4">
+                          <img src="pictures/Netherlands/IMG_20180103_121547.jpg" alt="Netherlands5">
+                          <img src="pictures/Netherlands/IMG_20180103_123602_1.jpg" alt="Netherlands6">
+                          <img src="pictures/Netherlands/IMG_20180103_143527.jpg" alt="Netherlands7">
+                          <img src="pictures/Netherlands/IMG_20180103_144440.jpg" alt="Netherlands8">
+                          <img src="pictures/Netherlands/IMG_20180103_145939.jpg" alt="Netherlands9">
+                          <img src="pictures/Netherlands/IMG_20180103_161358_2.jpg" alt="Netherlands10">
+                          <img src="pictures/Netherlands/IMG_20180103_162228.jpg" alt="Netherlands11">
+                          <img src="pictures/Netherlands/IMG_20180104_122406_1.jpg" alt="Netherlands12">
+                      </div>
+                  </div>
+              </row>
+          </div>
+        <br>
+        <!--Iceland-->
+        <div class="container">
+            <row>
+                <div class="col-lg-auto country">
+                    <!-- flag -->
+                    <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg"
+                    alt="Iceland's flag">
+                    <!-- name -->
+                    <span id="show">
+                        Iceland
+                    </span>
+                    <!-- images -->
+                    <div id="expandB">
+                        <img src="pictures/Iceland/20180822_185506.jpg" alt="Iceland1">
+                        <img src="pictures/Iceland/20180823_105052(0).jpg" alt="Iceland2">
+                        <img src="pictures/Iceland/20180823_140003.jpg" alt="Iceland3">
+                        <img src="pictures/Iceland/20180823_140643.jpg" alt="Iceland4">
+                        <img src="pictures/Iceland/20180823_141247.jpg" alt="Iceland5">
+                        <img src="pictures/Iceland/20180825_153039.jpg" alt="Iceland6">
+                        <img src="pictures/Iceland/20180825_153250(0).jpg" alt="Iceland7">
+                        <img src="pictures/Iceland/20180826_124152.jpg" alt="Iceland8">
+                        <img src="pictures/Iceland/20180826_144435.jpg" alt="Iceland9">
+                        <img src="pictures/Iceland/20180828_180538.jpg" alt="Iceland10">
+                        <img src="pictures/Iceland/20180829_144309.jpg" alt="Iceland11">
+                    </div>
+                </div>
+            </row>
+        </div>
+        <br>
+        <!--Germany-->
+        <div class="container">
+            <row>
+                <div class="col-lg-auto country">
+                    <!-- flag -->
+                    <img class="flag" src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg"
+                    alt="Germany's flag">
+                    <!-- name -->
+                    <span id="show">
+                        Germany
+                    </span>
+                    <!-- images -->
+                    <div id="expandB">
+                        <img src="pictures/Germany/20181201_142524.jpg" alt="Germany1">
+                        <img src="pictures/Germany/20181201_145735.jpg" alt="Germany2">
+                        <img src="pictures/Germany/20181202_124840.jpg" alt="Germany3">
+                        <img src="pictures/Germany/20181203_100756.jpg" alt="Germany4">
+                        <img src="pictures/Germany/20181204_114945.jpg" alt="Germany5">
+                        <img src="pictures/Germany/20181204_153447.jpg" alt="Germany6">
+                    </div>
+                </div>
+            </row>
+        </div>
+        <br>
+        <!--Switzerland-->
+        <div class="container">
+            <row>
+                <div class="col-lg-auto country">
+                    <!-- flag -->
+                    <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg"
+                    alt="Switzerland's flag">
+                    <!-- name -->
+                    <span id="show">
+                        Switzerland
+                    </span>
+                    <!-- images -->
+                    <div id="expandB">
+                        <img src="pictures/Switzerland/20190807_120504.jpg" alt="Switzerland1">
+                        <img src="pictures/Switzerland/20190807_120508.jpg" alt="Switzerland2">
+                        <img src="pictures/Switzerland/20190809_125630.jpg" alt="Switzerland3">
+                        <img src="pictures/Switzerland/20190809_125727.jpg" alt="Switzerland4">
+                        <img src="pictures/Switzerland/20190809_130036.jpg" alt="Switzerland5">
+                        <img src="pictures/Switzerland/20190809_132655.jpg" alt="Switzerland6">
+                        <img src="pictures/Switzerland/20190810_105716.jpg" alt="Switzerland7">
+                        <img src="pictures/Switzerland/20190810_114400(0).jpg" alt="Switzerland8">
+                        <img src="pictures/Switzerland/20190810_114437.jpg" alt="Switzerland9">
+                    </div>
+                </div>
+            </row>
+        </div>
+        <br>
+        <!--France-->
+        <div class="container">
+            <row>
+                <div class="col-lg-auto country">
+                    <!-- flag -->
+                    <img class="flag" src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg"
+                    alt="France's flag">
+                    <!-- name -->
+                    <span id="show">
+                        France
+                    </span>
+                    <!-- images -->
+                    <div id="expandB">
+                        <img src="pictures/France/20190807_201536.jpg" alt="France1">
+                        <img src="pictures/France/20190808_104712.jpg" alt="France2">
+                        <img src="pictures/France/20190808_145048.jpg" alt="France3">
+                        <img src="pictures/France/20190808_161709.jpg" alt="France4">
+                        <img src="pictures/France/20190808_191109.jpg" alt="France5">
+                    </div>
+                </div>
+            </row>
+        </div>
+        <br>
+        <!--Hungary-->
+        <div class="container">
+            <row>
+                <div class="col-lg-auto country">
+                    <!-- flag -->
+                    <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg"
+                    alt="Hungary's flag">
+                    <!-- name -->
+                    <span id="show">
+                        Hungary
+                    </span>
+                    <!-- images -->
+                    <div id="expandB">
+                        <img src="pictures/Hungary/IMG-20191129-WA0005.jpg" alt="Hungary1">
+                        <img src="pictures/Hungary/IMG-20191130-WA0003.jpg" alt="Hungary2">
+                    </div>
+                </div>
+            </row>
+        </div>
+        <br>
+        <!--Czech Republic-->
+        <div class="container">
+            <row>
+                <div class="col-lg-auto country">
+                    <!-- flag -->
+                    <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg"
+                    alt="Czech Republic's flag">
+                    <!-- name -->
+                    <span id="show">
+                        Czech Republic
+                    </span>
+                    <!-- images -->
+                    <div id="expandB">
+                        <img src="pictures/Czech Republic/IMG-20200125-WA0018.jpeg" alt="Czech Republic1">
+                        <img src="pictures/Czech Republic/IMG-20200126-WA0001.jpg" alt="Czech Republic2">
+                        <img src="pictures/Czech Republic/IMG-20200126-WA0004.jpg" alt="Czech Republic3">
+                    </div>
+                </div>
+            </row>
+        </div>
+        <br>
+        <!--Portugal-->
+        <div class="container">
+            <row>
+                <div class="col-lg-auto country">
+                    <!-- flag -->
+                    <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg"
+                    alt="Portugal's flag">
+                    <!-- name -->
+                    <span id="show">
+                        Portugal
+                    </span>
+                    <!-- images -->
+                    <div id="expandB">
+                        <img src="pictures/Portugal/IMG-20210330-WA0015(0).jpg" alt="Portugal1">
+                        <img src="pictures/Portugal/IMG-20210330-WA0017.jpg" alt="Portugal2">
+                    </div>
+                </div>
+            </row>
+        </div>
+    </body>
+</html>

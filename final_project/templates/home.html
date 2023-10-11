@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% block main %}
+    <!-- Defult home page -->
+    {% if not username %}
+        <div class="row text-center">
+            <div class="col">
+                <h6 style="color: royalblue;"><a href="{{ url_for('login') }}">Click here to log in</a></h6>
+            </div>
+        </div>
+    <!-- User home page -->
+    {% else %}
+        <h1 style="color: slateblue;">{{ username }} is logged in</h1>
+        <!-- Defult display for empty database of user -->
+        {% if not user_data %}
+            <h1>No existing data yet</h1>
+        <!-- User has existing data -->
+        {% else %}
+            <div class="continer">
+                <div class="row justify-content-center">
+                    <!-- Tables -->
+                    {% for type in user_data %}
+                        <div class="col">
+                            <div class="table-responsive">
+                                <!-- Table get its color from dictionary in application.py -->
+                                <table class="table table-hover text-center table-{{ types[loop.index - 1]['color'] }}">
+                                    <thead>
+                                        <!-- Table name, both name and lenght comes from variables in application.py -->
+                                        <tr><th colspan="{{ len_keys }}">{{ type.title() }}</th></tr>
+                                        <!-- Table headers, comes from a list in application.py -->
+                                        <tr>
+                                            {% for i in keys %}
+                                                <th>{{ i.title() }}</th>
+                                            {% endfor %}
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Iterate the list in the current key (lines of database) -->
+                                        {% for key in user_data[type] %}
+                                            <tr>
+                                                <!-- Iterate the dictionary in the current list (cells of database) -->
+                                                {% for item in keys %}
+                                                    <td>{{ key[item] }}</td>
+                                                {% endfor %}
+                                                <td>
+                                                    <!-- Delete button -->
+                                                    <a href="{{ url_for('delete', row=key['id']) }}" style="text-decoration: none;">
+                                                        <button class="btn btn-danger">Delete</button>
+                                                    </a>
+                                                    <!-- Edit button -->
+                                                    <a href="{{ url_for('edit', row=key['id']) }}">
+                                                        <button class="btn btn-info">Edit</button>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- Total sums by category -->
+                <div class="row justify-content-center bg-warning">
+                    <div class="col-auto">
+                        <h3>Total:</h3>
+                    </div>
+                    <!-- Iterate the keys in this dictionary found at application.py -->
+                    {% for category in totals %}
+                        <div class="col-auto">
+                            <h3>{{ category }}: {{ totals[category] }}</h3>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+{% endblock main %}
+    

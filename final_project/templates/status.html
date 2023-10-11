@@ -1,0 +1,16 @@
+<!-- Messages page for good, bad and neutral messages -->
+{% extends "layout.html" %}
+{% block main %}
+    <div class="row text-center">
+        <!-- Status display: good, bad or neutral -->
+        <h1 style=" color:blue">{{ status }}</h1>
+        <!-- If...else statement for showing message in matching color -->
+        {% if status == "success" %}
+            <h1 style="color:chartreuse">{{ message }}</h1>
+        {% elif status == "error" %}
+            <h1 style="color:red">{{ message }}</h1>
+        {% elif status == "neutral" %}
+            <h1 style="color:rgb(0, 0, 0)">{{ message }}</h1>
+        {% endif %}
+    </div>
+{% endblock main %}

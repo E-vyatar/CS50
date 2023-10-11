@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block title %}
+{% endblock  title %}
+{% block main %}
+    <form method="POST">
+        <!-- Category field -->
+        <div class="mb-3">
+            <label for="category" class="form-label">Category:</label>
+            <select class="form-control" name="category" type="text" id="category" required>
+                <!-- Display option, not for use -->
+                <option selected disabled hidden>Choose a category</option>
+                <!-- Iterate the list created at login -->
+                {% for category in categories %}
+                    <option value="{{ category }}">{{ category }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <!-- Sum field -->
+        <div class="mb-3">
+            <label for="sum" class="form-label">Sum:</label>
+            <input autocomplete="off" class="form-control" name="sum" type="number" id="sum" step="0.01" required>
+        </div>
+        <!-- Date field -->
+        <div class="mb-3">
+            <label for="date" class="form-label">Date:</label>
+            <input autocomplete="off" class="form-control" name="date" type="date" id="date" value="{{ today }}" required>
+        </div>
+        <!-- Details field -->
+        <div class="mb-3">
+            <label for="details" class="form-label">Details (Optional):</label>
+            <input autocomplete="off" class="form-control" name="details" type="text" id="details">
+        </div>
+        <!-- Submit button -->
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+{% endblock main %}

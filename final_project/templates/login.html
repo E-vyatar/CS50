@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block main %}
+    <div>
+        <form method="POST">
+            <!-- username field -->
+            <div class="mb-3">
+                <label for="userName" class="form-label">Username:</label>
+                <input type="text" class="form-control" id="userName" name="username" required autofocus>
+            </div>
+            <!-- password field -->
+            <div class="mb-3">
+                <label for="userPassword" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="userPassword" maxlength="" name="password" required>
+            </div>
+            <!-- submit button -->
+            <button type="submit" class="btn btn-primary">Log in</button>
+        </form>
+    </div>
+    <!-- Redirect to registration -->
+    <div class="border-top">
+        <small>
+            Don't Have An Account Yet? <a href="{{ url_for('register') }}">Register</a>
+        </small>
+    </div>
+{% endblock main %}
