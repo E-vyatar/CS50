@@ -101,25 +101,25 @@ int main(int argc, string argv[])
 }
 
 // Update ranks given a new vote
-//ranks = voter number, rank = candidate place
+// ranks = voter number, rank = candidate place
 bool vote(int rank, string name, int ranks[])
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(name, candidates[i]) == 0) //is the candidate name valid?
+        if (strcmp(name, candidates[i]) == 0) // is the candidate name valid?
         {
-            ranks[rank] = i; //the candidate name is valid, put his "name" (number) in place
+            ranks[rank] = i; // the candidate name is valid, put their "name" (number) in place
             return true;
         }
     }
-    return false; //the candidate name is'nt valid
+    return false; // the candidate name is'nt valid
 }
 
 // Update preferences given one voter's ranks
-//ranks = voter's choices
+// ranks = voter's choices
 void record_preferences(int ranks[])
 {
-    for (int a = 0; a < candidate_count; a++) //preferred candidate
+    for (int a = 0; a < candidate_count; a++) // preferred candidate
     {
         for (int b = a + 1; b < candidate_count; b++)
         {
@@ -138,18 +138,18 @@ void add_pairs(void)
         {
             if (preferences[a][b] != preferences[b][a])
             {
-                pair p; //temporary pair holer
-                if (preferences[a][b] > preferences[b][a]) //if candidate a won
+                pair p; // temporary pair holer
+                if (preferences[a][b] > preferences[b][a]) // if candidate a won
                 {
                     p.winner = a;
                     p.loser = b;
                 }
-                else //if candidate b won
+                else // if candidate b won
                 {
                     p.winner = b;
                     p.loser = a;
                 }
-                pairs[pair_count++] = p; //insert data to array
+                pairs[pair_count++] = p; // insert data to array
             }
         }
     }
@@ -159,24 +159,24 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    pair temp; //temporary place
+    pair temp; // temporary place
     for (int i = 0; i < pair_count; i++)
     {
-        int place = i; //current place holder
-        int cstrenght = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner]; //current place holder
+        int place = i; // current place holder
+        int cstrenght = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner]; // current place holder
         for (int j = i + 1; j < pair_count; j++)
         {
-            int tstrenght = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner]; //checked place wanter
-            if (tstrenght > cstrenght) //if wanter has stronger victory
+            int tstrenght = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner]; // checked place wanter
+            if (tstrenght > cstrenght) // if wanter has stronger victory
             {
-                place = j; //new place holder
-                cstrenght = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];//new place holder
+                place = j; // new place holder
+                cstrenght = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner]; // new place holder
             }
         }
-        //switching places
-        temp = pairs[place]; //claer winner old place
-        pairs[place] = pairs[i]; //put loser unto winner old place
-        pairs[i] = temp; //put winner into loser old place
+        // switching places
+        temp = pairs[place]; // claer winner old place
+        pairs[place] = pairs[i]; // put loser unto winner old place
+        pairs[i] = temp; // put winner into loser old place
     }
     return;
 }
@@ -186,9 +186,9 @@ void lock_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        if (!lock_check(pairs[i].winner, pairs[i].loser)) //if there is no cycle
+        if (!lock_check(pairs[i].winner, pairs[i].loser)) // if there is no cycle
         {
-            locked[pairs[i].winner][pairs[i].loser] = true; //lock the pair
+            locked[pairs[i].winner][pairs[i].loser] = true; // lock the pair
         }
     }
     return;
